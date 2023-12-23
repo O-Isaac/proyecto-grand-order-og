@@ -1,8 +1,9 @@
 import Image from "next/image"
+import { Email, Github } from "./icons"
 
 export default function Navigation () {
     return (
-        <nav className='flex justify-between items-center container mx-auto  gap-5'>
+        <nav className='flex justify-between items-center container mx-auto lg:flex-row flex-col gap-5'>
             <a className='flex items-center group ' href="/">
               <figure>
                 <Image height={60} width={60} className='group-hover:opacity-50 transition-opacity' src="https://proyectograndorder.es/images/bg-logo.svg" alt="Logo" />
@@ -11,7 +12,14 @@ export default function Navigation () {
             </a>
             <ul className="flex gap-2">
               <li>
-                <a className="bg-black text-white py-3 px-4 rounded-lg hover:bg-black/80" href="mailto:zaragozamendozaisaac@gmail.com">Contacto</a>
+                <a href="mailto:zaragozamendozaisaac@gmail.com">
+                  <Email className="hover:text-neutral-700 transition-colors" width={34} height={34} />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/O-Isaac/Proyecto-Grand-Order-Services">
+                  <Github className="hover:text-neutral-700 transition-colors" height={34} width={34} />
+                </a>
               </li>
             </ul>
         </nav>
