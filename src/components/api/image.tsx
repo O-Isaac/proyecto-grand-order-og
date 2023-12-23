@@ -1,3 +1,4 @@
+import { getHostname } from "@/utils/domain";
 import Random from "@/utils/random";
 
 export default function OGImage ({ searchParams }: { searchParams: URLSearchParams }) {
@@ -16,7 +17,7 @@ export default function OGImage ({ searchParams }: { searchParams: URLSearchPara
             <div tw="flex">
               <img
                 tw="mt-65"
-                src={`http://localhost:3000/themes/${characterTheme}/og.png`}
+                src={`https://${getHostname()}/themes/${characterTheme}/og.png`}
               />
             </div>
         </div>
