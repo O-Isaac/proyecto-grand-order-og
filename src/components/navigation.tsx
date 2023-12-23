@@ -1,9 +1,11 @@
+import Image from "next/image"
+
 export default function Navigation () {
     return (
         <nav className='flex justify-between items-center container mx-auto lg:flex-row flex-col gap-5'>
             <a className='flex items-center group ' href="/">
               <figure>
-                <img height={60} width={60} className='group-hover:opacity-50 transition-opacity' src="https://proyectograndorder.es/images/bg-logo.svg" alt="Logo" />
+                <Image height={60} width={60} className='group-hover:opacity-50 transition-opacity' src="https://proyectograndorder.es/images/bg-logo.svg" alt="Logo" />
               </figure>
               <h1 className='font-extrabold text-xl text-center flex-shrink-0 group-hover:opacity-50 transition-opacity'>Proyecto Grand Order</h1>
             </a>
