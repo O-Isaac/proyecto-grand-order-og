@@ -17,7 +17,7 @@ export default function OGImage ({ searchParams }: { searchParams: URLSearchPara
             <div tw="flex">
               <img
                 tw="mt-65"
-                src={`https://${getHostname()}/themes/${characterTheme}/og.png`}
+                src={`${getHostname()}/themes/${characterTheme}/og.png`}
               />
             </div>
         </div>

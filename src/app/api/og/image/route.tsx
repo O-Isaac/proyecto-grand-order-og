@@ -3,7 +3,7 @@ import OGImage from "@/components/api/image"
 
 /**
  * @swagger
- * /api/og:
+ * /api/og/image:
  *   get:
  *     tags:
  *      - Image

@@ -18,7 +18,9 @@ const spec: Record<string, any> = createSwaggerSpec({
 });
 
 export default function Home() {
-  return <section className='mb-24'>
-    <Docs spec={spec} />
-  </section>
+  return (
+    <section className='mb-24'>
+      <Docs spec={spec} />
+    </section>
+  )
 }

@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Navigation () {
     return (
-        <nav className='flex justify-between items-center container mx-auto lg:flex-row flex-col gap-5'>
+        <nav className='flex justify-between items-center container mx-auto  gap-5'>
             <a className='flex items-center group ' href="/">
               <figure>
                 <Image height={60} width={60} className='group-hover:opacity-50 transition-opacity' src="https://proyectograndorder.es/images/bg-logo.svg" alt="Logo" />
