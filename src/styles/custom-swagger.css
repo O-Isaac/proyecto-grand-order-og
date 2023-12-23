@@ -1,0 +1,15 @@
+.swagger-ui .info .title {
+    @apply text-white font-extrabold
+}
+
+.swagger-ui .info .title small {
+    @apply font-light
+}
+
+.swagger-ui .info p {
+    @apply text-white
+}
+
+.swagger-ui .opblock-tag,   .opblock-tag:hover {
+    @apply text-neutral-900 bg-white rounded-md
+}
