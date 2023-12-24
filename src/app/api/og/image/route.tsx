@@ -42,7 +42,10 @@ export function GET(req: Request) {
     try {
         const image = new ImageResponse(<OGImage searchParams={searchParams} />, {
             width: 1020,
-            height: 170
+            height: 170,
+            headers: {
+                "cache-control": "no-store, max-age=0"
+            }
         })
 
         return image
