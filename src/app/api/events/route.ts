@@ -41,10 +41,32 @@
  *                               type: string
  *                               description: Current status of the event (e.g., "Trabajando", "Planeado")
  */
-export const dynamic = "auto";
 
 export async function GET() {
-  const req = await fetch(process.env.ENDPOINT!);
-  const res = await req.json();
-  return Response.json(res);
+  try {
+    const req = await fetch(process.env.ENDPOINT!, {
+      next: { revalidate: 120 },
+    });
+
+    if (!req.ok) {
+      return Response.json(
+        { status: req.status, message: "Failed to fetch data" },
+        { status: req.status }
+      );
+    }
+
+    const res = await req.json();
+
+    return Response.json({
+      status: 200,
+      message: "Ok",
+      sheets: res,
+    });
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return Response.json(
+      { status: 500, message: "Internal Server Error" },
+      { status: 500 }
+    );
+  }
 }
