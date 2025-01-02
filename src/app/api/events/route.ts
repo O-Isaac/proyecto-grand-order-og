@@ -57,11 +57,7 @@ export async function GET() {
 
     const res = await req.json();
 
-    return Response.json({
-      status: 200,
-      message: "Ok",
-      sheets: res,
-    });
+    return Response.json(res);
   } catch (error) {
     console.error("Error fetching data:", error);
     return Response.json(
