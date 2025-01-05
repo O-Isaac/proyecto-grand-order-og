@@ -40,6 +40,12 @@
  *                             status:
  *                               type: string
  *                               description: Current status of the event (e.g., "Trabajando", "Planeado")
+ *                             lines:
+ *                               type: number
+ *                               description: Lines have the script
+ *                             completed:
+ *                               type: number
+ *                               descryption: Lines are translated by team
  */
 
 export async function GET() {
